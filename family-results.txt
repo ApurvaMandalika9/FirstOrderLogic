@@ -1,0 +1,98 @@
+1. Who are the grandchildren of Charles?
+
+?- grandparent(charles, X).
+false
+X = archieharrison
+X = princelouis
+X = princesscharlotte
+X = princegeorge
+parsing query: grandparent(charles,X) ok!
+
+
+2. Who is married to Prince Willam’s brother?
+
+?- spouse(X, Y), brother(princewilliam, Y).
+false
+X = meghan, Y = princeharry
+X = meghan, Y = princeharry
+parsing query: spouse(X,Y),brother(princewilliam,Y) ok!
+
+
+3. Who is the uncle of Princess Charlotte?
+
+?- uncle(X, princesscharlotte).
+false
+X = princeharry
+X = princeharry
+parsing query: uncle(X,princesscharlotte) ok!
+
+
+4. Who is the aunt of Archie Harrison?
+
+?- aunt(X, archieharrison).
+false
+X = catherine
+X = catherine
+parsing query: aunt(X,archieharrison) ok!
+
+
+5. Who are the nephews of Prince Harry?
+
+?- nephew(X,princeharry).
+false
+X = princelouis
+X = princelouis
+X = princegeorge
+X = princegeorge
+parsing query: nephew(X,princeharry) ok!
+
+
+6. Who is the stepmother of Prince William?
+
+?- stepmother(X, princewilliam).
+false
+X = camila
+parsing query: stepmother(X,princewilliam) ok!
+
+7. Who has siblings?
+
+?- sibling(X,_).
+false
+X = princesscharlotte
+X = princesscharlotte
+X = princesscharlotte
+X = princesscharlotte
+X = princeharry
+X = princeharry
+X = princelouis
+X = princelouis
+X = princelouis
+X = princelouis
+X = princegeorge
+X = princegeorge
+X = princegeorge
+X = princegeorge
+X = princewilliam
+X = princewilliam
+parsing query: sibling(X,_) ok!
+
+
+8. Who has a female cousin?
+
+?- cousin(X, Y), female(Y).
+false
+X = archieharrison, Y = princesscharlotte
+X = archieharrison, Y = princesscharlotte
+parsing query: cousin(X,Y),female(Y) ok!
+
+
+9. Who has a niece?
+
+?- niece(_, X).
+false
+X = meghan
+X = meghan
+X = princeharry
+X = princeharry
+parsing query: niece(_,X) ok!
+
